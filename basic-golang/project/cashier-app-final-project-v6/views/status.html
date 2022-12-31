@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Show Message</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    *,
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: default;
+    }
+
+    .content {
+      background: url("/assets/images/unicorn.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .waving {
+      animation: wave 2.5s infinite;
+      transform-origin: 70% 70%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: rotate(0deg);
+      }
+      10% {
+        transform: rotate(10deg);
+      }
+      20% {
+        transform: rotate(-5deg);
+      }
+      30% {
+        transform: rotate(10deg);
+      }
+      40% {
+        transform: rotate(-5deg);
+      }
+      50% {
+        transform: rotate(10deg);
+      }
+      60% {
+        transform: rotate(-5deg);
+      }
+      70% {
+        transform: rotate(10deg);
+      }
+      80% {
+        transform: rotate(-5deg);
+      }
+      90% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    .envelope {
+      position: relative;
+    }
+
+    .back {
+      position: relative;
+      width: 25vw;
+      height: 20vw;
+      background-color: #6247aa;
+    }
+
+    .letter {
+      position: absolute;
+      background-color: #fff;
+      width: 20vw;
+      height: 18vw;
+      top: -8vw;
+      left: 2.5vw;
+      z-index: 2;
+    }
+
+    .text {
+      text-align: center;
+      font-size: 17px;
+      font-family: arial;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .front {
+      position: absolute;
+      border-right: 17vw solid #815ac0;
+      border-top: 10vw solid transparent;
+      border-bottom: 10vw solid transparent;
+      height: 0;
+      width: 0;
+      top: 0;
+      left: 8vw;
+      z-index: 3;
+    }
+
+    .front:before {
+      content: "";
+      position: absolute;
+      border-left: 17vw solid #815ac0;
+      border-top: 10vw solid transparent;
+      border-bottom: 10vw solid transparent;
+      height: 0;
+      width: 0;
+      top: -10vw;
+      left: -8vw;
+    }
+
+    .front:after {
+      content: "";
+      position: absolute;
+      border-bottom: 10vw solid #815ac0;
+      border-left: 12vw solid transparent;
+      border-right: 13vw solid transparent;
+      height: 0;
+      width: 0;
+      top: -0.05vw;
+      left: -8vw;
+    }
+
+    .top {
+      position: absolute;
+      border-top: 10vw solid #9163cb;
+      border-left: 12vw solid transparent;
+      border-right: 13vw solid transparent;
+      height: 0;
+      width: 0;
+      top: -9.6vw;
+      transform: rotateX(160deg);
+    }
+
+    .shadow {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.1);
+      width: 25vw;
+      height: 1vw;
+      top: 21vw;
+      border-radius: 50%;
+    }
+
+    .hello {
+      font-size: 1rem !important;
+    }
+
+    .message {
+      font-size: 1.5rem !important;
+    }
+
+    .login {
+      margin-top: -1vw;
+    }
+
+    .arrow {
+      width: 4vw;
+      animation: jump 2s infinite;
+    }
+
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(10%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @media only screen and (min-width: 1080px) {
+      .hello {
+        font-size: 1.3rem !important;
+      }
+    }
+
+    @media only screen and (min-width: 1280px) {
+      .hello {
+        font-size: 1.5rem !important;
+      }
+    }
+  </style>
+  <body>
+    <div
+      class="content min-vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div class="envelope">
+        <div class="back"></div>
+        <div class="letter">
+          <div
+            class="text d-flex flex-column justify-content-center align-items-center"
+          >
+            <h1 class="hello">
+              <span class="waving">👋</span> Hello {{.name}}
+              <span class="waving">👋</span>
+            </h1>
+            <p class="message">{{.message}}</p>
+            <a href="/page/login" class="login">Go to Login Page</a>
+            <img
+              src="/assets/images/arrow.png"
+              alt="arrow"
+              class="arrow mt-sm-3"
+            />
+          </div>
+        </div>
+        <div class="front"></div>
+        <div class="top"></div>
+        <div class="shadow"></div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

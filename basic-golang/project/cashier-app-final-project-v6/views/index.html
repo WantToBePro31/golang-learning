@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cashier App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    *,
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: default;
+    }
+
+    .content {
+      background: url("/assets/images/unicorn.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .cashier {
+      color: rgb(43, 177, 226);
+      animation: glow 1s infinite;
+    }
+
+    @keyframes glow {
+      0% {
+        text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+      }
+      10% {
+        text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+      }
+      20% {
+        text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+      }
+      30% {
+        text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+      }
+      40% {
+        text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+      }
+      50% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+      }
+      60% {
+        text-shadow: 0 0 8px #fff, 0 0 16px #fff, 0 0 32px #fff;
+      }
+      70% {
+        text-shadow: 0 0 6px #fff, 0 0 12px #fff, 0 0 24px #fff;
+      }
+      80% {
+        text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 16px #fff;
+      }
+      90% {
+        text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 8px #fff;
+      }
+      100% {
+        text-shadow: 0 0 0px #fff, 0 0 0px #fff, 0 0 0px #fff;
+      }
+    }
+
+    .btn {
+      background-color: #e0e0e0;
+    }
+
+    .btn:hover a {
+      color: white !important;
+      cursor: pointer;
+    }
+
+    main {
+      margin-top: 3rem !important;
+    }
+
+    .welcome-text {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .image-cashier {
+      width: 50vw;
+    }
+
+    @media only screen and (min-width: 500px) {
+      main {
+        margin-top: 8rem !important;
+      }
+    }
+
+  </style>
+  <body>
+    <div class="content min-vh-100">
+      <nav class="nav d-flex justify-content-between p-2 bg-secondary">
+        <h1 class="d-flex align-items-center cashier ms-3">Cashier App</h1>
+        <div class="d-flex gap-3 me-3">
+          <button
+            type="button"
+            class="btn btn-outline-primary btn-md btn-block fs-5"
+          >
+            <a href="/page/register" class="text-decoration-none text-dark"
+              >Register</a
+            >
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-info btn-md btn-block fs-5"
+          >
+            <a href="/page/login" class="text-decoration-none text-dark"
+              >Login</a
+            >
+          </button>
+        </div>
+      </nav>
+      <main class="d-flex justify-content-center align-items-center">
+        <div class="home-desc text-center">
+          <h1 class="text-success welcome-text fw-bold display-2">
+            Welcome to <span class="text-danger">Cashier App</span>
+          </h1>
+          <p class="fs-1 font-monospace mx-lg-5">
+            Your comfort is our priority, we will serve you as a king. Buy as
+            many goods as you want.
+          </p>
+        </div>
+        <img
+          src="/assets/images/cashier.png"
+          alt="cashier"
+          class="image-cashier"
+        />
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
