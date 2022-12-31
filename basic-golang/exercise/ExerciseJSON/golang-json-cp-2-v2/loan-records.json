@@ -1,0 +1,10 @@
+{
+  "month_date": "January 2021",
+  "start_balance": 500000,
+  "end_balance": 50000,
+  "Borrowers": [
+    { "id": "1", "TotalLoan": 150000 },
+    { "id": "2", "TotalLoan": 150000 },
+    { "id": "3", "TotalLoan": 150000 }
+  ]
+}
